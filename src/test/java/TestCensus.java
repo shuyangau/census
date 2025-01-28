@@ -63,7 +63,7 @@ public class TestCensus {
             assertTrue("Iterator hasn't been closed.", iterator.closed);
             assertTrue("Invalid result null.", strings != null);
             System.out.println(Arrays.toString(strings));
-            assertArrayEquals(new String[]{"1:0:3", "2:1:2", "3:2:1"}, strings);
+            assertArrayEquals(new String[]{"1:0=3", "2:1=2", "3:2=1"}, strings);
         } catch (RuntimeException e) {
             System.out.println("Invalid ages throw exception. Not bad!");
         } finally {
@@ -79,7 +79,7 @@ public class TestCensus {
         assertTrue("Iterator hasn't been closed.", iterator.closed);
         assertTrue("Invalid result null.", strings != null);
         System.out.println(Arrays.toString(strings));
-        assertArrayEquals(new String[]{"1:138=93", "2:10=85", "2:35=85", "3:90=84"}, strings);
+        assertArrayEquals(new String[]{"1:138=93", "2:10=85", "2:35=85", "3:90=84", "3:106=84"}, strings);
     }
 
     @Test
